@@ -23,8 +23,6 @@ Add the following directive to your Javascript manifest file (application.js):
 momentjs-rails 1.5.0 == Moment.js 1.5.0
 
 Every attempt is made to mirror the currently shipping Momentum.js version number wherever possible.
-The major and minor version numbers will always represent the Momentum.js version, but the patch level
-may differ should a fix to gem need to be pushed before Moment.js ships an update to the library.
-
-When the versions differ, it will be noted in the readme.
+The major, minor, and patch version numbers will always represent the Momentum.js version. Should a gem
+bug be discovered, a 4th version identifier will be added and incremented.
 
