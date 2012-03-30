@@ -20,7 +20,7 @@ Add the following directive to your Javascript manifest file (application.js):
 
 ## Versioning
 
-momentjs-rails 1.4.0 == Moment.js 1.4.0
+momentjs-rails 1.5.0 == Moment.js 1.5.0
 
 Every attempt is made to mirror the currently shipping Momentum.js version number wherever possible.
 The major and minor version numbers will always represent the Momentum.js version, but the patch level
