@@ -18,6 +18,10 @@ Add the following directive to your Javascript manifest file (application.js):
 
     //= require moment
 
+If you want to include a localization file, also add the following directive:
+
+    //= require moment/<locale>.js
+
 ## Versioning
 
 momentjs-rails 1.5.0 == Moment.js 1.5.0
