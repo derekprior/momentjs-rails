@@ -1,6 +1,6 @@
 // moment.js language configuration
-// language : portuguese (pt)
-// author : Jefferson : https://github.com/jalex79
+// language : brazilian portuguese (pt-br)
+// author : Caio Ribeiro Pereira : https://github.com/caio-ribeiro-pereira
 (function () {
     var lang = {
             months : "Janeiro_Fevereiro_Março_Abril_Maio_Junho_Julho_Agosto_Setembro_Outubro_Novembro_Dezembro".split("_"),
@@ -53,6 +53,6 @@
     }
     // Browser
     if (typeof window !== 'undefined' && this.moment && this.moment.lang) {
-        this.moment.lang('pt', lang);
+        this.moment.lang('pt-br', lang);
     }
 }());

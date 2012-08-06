@@ -1,6 +1,6 @@
 // moment.js language configuration
-// language : great britain english (en-gb)
-// author : Chris Gedrim : https://github.com/chrisgedrim
+// language : canadian english (en-ca)
+// author : Jonathan Abourbih : https://github.com/jonbca
 (function () {
     var lang = {
             months : "January_February_March_April_May_June_July_August_September_October_November_December".split("_"),
@@ -10,10 +10,10 @@
             weekdaysMin : "Su_Mo_Tu_We_Th_Fr_Sa".split("_"),
             longDateFormat : {
                 LT : "h:mm A",
-                L : "DD/MM/YYYY",
-                LL : "D MMMM YYYY",
-                LLL : "D MMMM YYYY LT",
-                LLLL : "dddd, D MMMM YYYY LT"
+                L : "YYYY-MM-DD",
+                LL : "D MMMM, YYYY",
+                LLL : "D MMMM, YYYY LT",
+                LLLL : "dddd, D MMMM, YYYY LT"
             },
             calendar : {
                 sameDay : '[Today at] LT',

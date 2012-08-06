@@ -10,3 +10,7 @@
 ### Version 1.6.2 (2012-06-07)
 - Upgraded Moment.js to 1.6.2
 - Added localization files
+
+### Version 1.7.0 (2012-08-06)
+- Upgrade Moment.js to 1.7.0
+- Upgrade localization files to 1.7.0 tagged versions.
