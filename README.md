@@ -29,4 +29,3 @@ momentjs-rails 1.7.0 == Moment.js 1.7.0
 Every attempt is made to mirror the currently shipping Momentum.js version number wherever possible.
 The major, minor, and patch version numbers will always represent the Momentum.js version. Should a gem
 bug be discovered, a 4th version identifier will be added and incremented.
-
