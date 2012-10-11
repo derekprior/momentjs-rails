@@ -24,7 +24,7 @@ If you want to include a localization file, also add the following directive:
 
 momentjs-rails comes with the [Twix plugin](https://github.com/icambron/twix.js) that you can use by writing:
 
-    //= require moment/twix
+    //= require twix
 
 ## Versioning
 
