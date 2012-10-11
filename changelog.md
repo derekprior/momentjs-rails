@@ -18,3 +18,4 @@
 ### Version 1.7.2 (2012-10-11)
 - Upgrade Moment.js to 1.7.2
 - Upgrade localization files to 1.7.2 tagged versions.
+- Add Twix plugin
