@@ -18,3 +18,6 @@
 ### Version 1.7.2 (2012-12-17)
 - Upgrade Moment.js to 1.7.2
 - Upgrade localization files to 1.7.2 tagged versions.
+
+### Version 1.7.3 (2013-01-30)
+- Rails 4 compatibility
