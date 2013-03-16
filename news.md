@@ -1,4 +1,9 @@
-### Version 1.7.2 (2013-03-16)
+### Version 2.0.0.1 (2013-03-16)
+- Actually update Moment.js to 2.0.0 (whoops).
+- gem version 2.0.0 was yanked. It was only live for two minutes, so hopefully
+  there was no harm done.
+
+### Version 2.0.0 (2013-03-16)
 - Upgrade Moment.js to 2.0.0
 - Upgrade localization files to 2.0.0 tagged versions.
 - Update Railties dependency to allow Rails 4
