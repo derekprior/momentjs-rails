@@ -2,7 +2,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "momentjs-rails"
-  s.version     = "1.7.2"
+  s.version     = "2.0.0"
   s.authors     = ["Derek Prior"]
   s.homepage    = "https://github.com/derekprior/momentjs-rails"
   s.summary     = "The Moment.js JavaScript library ready to play with Rails."
@@ -11,7 +11,9 @@ Gem::Specification.new do |s|
     This gem allows for its easy inclusion into the rails asset pipeline.
   EOF
 
-  s.files = Dir["{lib,vendor}/**/*"] + ["changelog.md", "MIT-LICENSE", "README.md"]
+  s.files = Dir["{lib,vendor}/**/*"] + ["news.md", "MIT-LICENSE", "README.md"]
+  s.test_files = Dir["test/**/*"]
 
-  s.add_dependency "railties", "~> 3.1"
+  s.add_dependency "railties", ">= 3.1"
+  s.add_development_dependency "rails", "~> 3.2.12"
 end
