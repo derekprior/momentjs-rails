@@ -2,7 +2,7 @@
 // language : galician (gl)
 // author : Juan G. Hurtado : https://github.com/juanghurtado
 
-require('../moment').lang('gl', {
+moment.lang('gl', {
     months : "Xaneiro_Febreiro_Marzo_Abril_Maio_Xuño_Xullo_Agosto_Setembro_Octubro_Novembro_Decembro".split("_"),
     monthsShort : "Xan._Feb._Mar._Abr._Mai._Xuñ._Xul._Ago._Set._Out._Nov._Dec.".split("_"),
     weekdays : "Domingo_Luns_Martes_Mércores_Xoves_Venres_Sábado".split("_"),
