@@ -2,7 +2,7 @@
 // language : Morocco Central Atlas Tamaziɣt in Latin (tzm-la)
 // author : Abdel Said : https://github.com/abdelsaid
 
-require('../moment').lang('tzm-la', {
+moment.lang('tzm-la', {
     months : "innayr_brˤayrˤ_marˤsˤ_ibrir_mayyw_ywnyw_ywlywz_ɣwšt_šwtanbir_ktˤwbrˤ_nwwanbir_dwjnbir".split("_"),
     monthsShort : "innayr_brˤayrˤ_marˤsˤ_ibrir_mayyw_ywnyw_ywlywz_ɣwšt_šwtanbir_ktˤwbrˤ_nwwanbir_dwjnbir".split("_"),
     weekdays : "asamas_aynas_asinas_akras_akwas_asimwas_asiḍyas".split("_"),

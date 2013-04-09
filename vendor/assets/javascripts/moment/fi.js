@@ -45,7 +45,7 @@ function verbal_number(number, isFuture) {
     return number < 10 ? (isFuture ? numbers_future[number] : numbers_past[number]) : number;
 }
 
-require('../moment').lang('fi', {
+moment.lang('fi', {
     months : "tammikuu_helmikuu_maaliskuu_huhtikuu_toukokuu_kesäkuu_heinäkuu_elokuu_syyskuu_lokakuu_marraskuu_joulukuu".split("_"),
     monthsShort : "tam_hel_maa_huh_tou_kes_hei_elo_syy_lok_mar_jou".split("_"),
     weekdays : "sunnuntai_maanantai_tiistai_keskiviikko_torstai_perjantai_lauantai".split("_"),
