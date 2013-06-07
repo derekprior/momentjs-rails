@@ -1,3 +1,6 @@
+### Version 2.0.0.2 (2013-06-06)
+- Fix localization files (thanks, eddloschi).
+
 ### Version 2.0.0.1 (2013-03-16)
 - Actually update Moment.js to 2.0.0 (whoops).
 - gem version 2.0.0 was yanked. It was only live for two minutes, so hopefully
