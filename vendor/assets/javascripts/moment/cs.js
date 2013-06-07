@@ -62,7 +62,7 @@ function translate(number, withoutSuffix, key, isFuture) {
     }
 }
 
-require('../moment').lang('cs', {
+moment.lang('cs', {
     months : months,
     monthsShort : monthsShort,
     monthsParse : (function (months, monthsShort) {

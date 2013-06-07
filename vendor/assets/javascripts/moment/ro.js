@@ -3,7 +3,7 @@
 // author : Vlad Gurdiga : https://github.com/gurdiga
 // author : Valentin Agachi : https://github.com/avaly
 
-require('../moment').lang('ro', {
+moment.lang('ro', {
     months : "Ianuarie_Februarie_Martie_Aprilie_Mai_Iunie_Iulie_August_Septembrie_Octombrie_Noiembrie_Decembrie".split("_"),
     monthsShort : "Ian_Feb_Mar_Apr_Mai_Iun_Iul_Aug_Sep_Oct_Noi_Dec".split("_"),
     weekdays : "Duminică_Luni_Marţi_Miercuri_Joi_Vineri_Sâmbătă".split("_"),

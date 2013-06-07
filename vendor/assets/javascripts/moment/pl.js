@@ -24,7 +24,7 @@ function translate(number, withoutSuffix, key) {
     }
 }
 
-require('../moment').lang('pl', {
+moment.lang('pl', {
     months : "styczeń_luty_marzec_kwiecień_maj_czerwiec_lipiec_sierpień_wrzesień_październik_listopad_grudzień".split("_"),
     monthsShort : "sty_lut_mar_kwi_maj_cze_lip_sie_wrz_paź_lis_gru".split("_"),
     weekdays : "niedziela_poniedziałek_wtorek_środa_czwartek_piątek_sobota".split("_"),
