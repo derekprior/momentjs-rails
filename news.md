@@ -1,3 +1,7 @@
+### Version 2.1.0 (2013-07-20)
+- Updated to Moment.js to 2.1.0
+- Updated localization files using compressed versions (ready for browser)
+
 ### Version 2.0.0.2 (2013-06-06)
 - Fix localization files (thanks, eddloschi).
 
