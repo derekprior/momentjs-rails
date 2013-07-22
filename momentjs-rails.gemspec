@@ -6,6 +6,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Derek Prior"]
   s.homepage    = "https://github.com/derekprior/momentjs-rails"
   s.summary     = "The Moment.js JavaScript library ready to play with Rails."
+  s.license     = "MIT"
   s.description = <<-EOF
     Moment.js is a lightweight javascript date library for parsing, manipulating, and formatting dates.
     This gem allows for its easy inclusion into the rails asset pipeline.
