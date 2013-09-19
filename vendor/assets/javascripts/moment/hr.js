@@ -1,6 +1,8 @@
 // moment.js language configuration
-// language : slovenian (sl)
-// author : Robert Sedovšek : https://github.com/sedovsek
+// language : hrvatski (hr)
+// author : Bojan Marković : https://github.com/bmarkovic
+
+// based on (sl) translation by Robert Sedovšek
 
 (function (factory) {
     if (typeof define === 'function' && define.amd) {
@@ -11,73 +13,66 @@
         factory(window.moment); // Browser global
     }
 }(function (moment) {
+
     function translate(number, withoutSuffix, key) {
         var result = number + " ";
         switch (key) {
         case 'm':
-            return withoutSuffix ? 'ena minuta' : 'eno minuto';
+            return withoutSuffix ? 'jedna minuta' : 'jedne minute';
         case 'mm':
             if (number === 1) {
                 result += 'minuta';
-            } else if (number === 2) {
-                result += 'minuti';
-            } else if (number === 3 || number === 4) {
+            } else if (number === 2 || number === 3 || number === 4) {
                 result += 'minute';
             } else {
-                result += 'minut';
+                result += 'minuta';
             }
             return result;
         case 'h':
-            return withoutSuffix ? 'ena ura' : 'eno uro';
+            return withoutSuffix ? 'jedan sat' : 'jednog sata';
         case 'hh':
             if (number === 1) {
-                result += 'ura';
-            } else if (number === 2) {
-                result += 'uri';
-            } else if (number === 3 || number === 4) {
-                result += 'ure';
+                result += 'sat';
+            } else if (number === 2 || number === 3 || number === 4) {
+                result += 'sata';
             } else {
-                result += 'ur';
+                result += 'sati';
             }
             return result;
         case 'dd':
             if (number === 1) {
                 result += 'dan';
             } else {
-                result += 'dni';
+                result += 'dana';
             }
             return result;
         case 'MM':
             if (number === 1) {
-                result += 'mesec';
-            } else if (number === 2) {
-                result += 'meseca';
-            } else if (number === 3 || number === 4) {
-                result += 'mesece';
+                result += 'mjesec';
+            } else if (number === 2 || number === 3 || number === 4) {
+                result += 'mjeseca';
             } else {
-                result += 'mesecev';
+                result += 'mjeseci';
             }
             return result;
         case 'yy':
             if (number === 1) {
-                result += 'leto';
-            } else if (number === 2) {
-                result += 'leti';
-            } else if (number === 3 || number === 4) {
-                result += 'leta';
+                result += 'godina';
+            } else if (number === 2 || number === 3 || number === 4) {
+                result += 'godine';
             } else {
-                result += 'let';
+                result += 'godina';
             }
             return result;
         }
     }
 
-    moment.lang('sl', {
-        months : "januar_februar_marec_april_maj_junij_julij_avgust_september_oktober_november_december".split("_"),
-        monthsShort : "jan._feb._mar._apr._maj._jun._jul._avg._sep._okt._nov._dec.".split("_"),
-        weekdays : "nedelja_ponedeljek_torek_sreda_četrtek_petek_sobota".split("_"),
-        weekdaysShort : "ned._pon._tor._sre._čet._pet._sob.".split("_"),
-        weekdaysMin : "ne_po_to_sr_če_pe_so".split("_"),
+    moment.lang('hr', {
+        months : "sječanj_veljača_ožujak_travanj_svibanj_lipanj_srpanj_kolovoz_rujan_listopad_studeni_prosinac".split("_"),
+        monthsShort : "sje._vel._ožu._tra._svi._lip._srp._kol._ruj._lis._stu._pro.".split("_"),
+        weekdays : "nedjelja_ponedjeljak_utorak_srijeda_četvrtak_petak_subota".split("_"),
+        weekdaysShort : "ned._pon._uto._sri._čet._pet._sub.".split("_"),
+        weekdaysMin : "ne_po_ut_sr_če_pe_su".split("_"),
         longDateFormat : {
             LT : "H:mm",
             L : "DD. MM. YYYY",
@@ -86,53 +81,54 @@
             LLLL : "dddd, D. MMMM YYYY LT"
         },
         calendar : {
-            sameDay  : '[danes ob] LT',
-            nextDay  : '[jutri ob] LT',
+            sameDay  : '[danas u] LT',
+            nextDay  : '[sutra u] LT',
 
             nextWeek : function () {
                 switch (this.day()) {
                 case 0:
-                    return '[v] [nedeljo] [ob] LT';
+                    return '[u] [nedjelju] [u] LT';
                 case 3:
-                    return '[v] [sredo] [ob] LT';
+                    return '[u] [srijedu] [u] LT';
                 case 6:
-                    return '[v] [soboto] [ob] LT';
+                    return '[u] [subotu] [u] LT';
                 case 1:
                 case 2:
                 case 4:
                 case 5:
-                    return '[v] dddd [ob] LT';
+                    return '[u] dddd [u] LT';
                 }
             },
-            lastDay  : '[včeraj ob] LT',
+            lastDay  : '[jučer u] LT',
             lastWeek : function () {
                 switch (this.day()) {
                 case 0:
                 case 3:
+                    return '[prošlu] dddd [u] LT';
                 case 6:
-                    return '[prejšnja] dddd [ob] LT';
+                    return '[prošle] [subote] [u] LT';
                 case 1:
                 case 2:
                 case 4:
                 case 5:
-                    return '[prejšnji] dddd [ob] LT';
+                    return '[prošli] dddd [u] LT';
                 }
             },
             sameElse : 'L'
         },
         relativeTime : {
-            future : "čez %s",
-            past   : "%s nazaj",
-            s      : "nekaj sekund",
+            future : "za %s",
+            past   : "prije %s",
+            s      : "par sekundi",
             m      : translate,
             mm     : translate,
             h      : translate,
             hh     : translate,
-            d      : "en dan",
+            d      : "dan",
             dd     : translate,
-            M      : "en mesec",
+            M      : "mjesec",
             MM     : translate,
-            y      : "eno leto",
+            y      : "godinu",
             yy     : translate
         },
         ordinal : '%d.',

@@ -1,6 +1,6 @@
 // moment.js language configuration
-// language : hindi (hi)
-// author : Mayank Singhal : https://github.com/mayanksinghal
+// language : Marathi (mr)
+// author : Harshad Kale : https://github.com/kalehv
 
 (function (factory) {
     if (typeof define === 'function' && define.amd) {
@@ -36,14 +36,14 @@
         '०': '0'
     };
 
-    moment.lang('hi', {
-        months : 'जनवरी_फ़रवरी_मार्च_अप्रैल_मई_जून_जुलाई_अगस्त_सितम्बर_अक्टूबर_नवम्बर_दिसम्बर'.split("_"),
-        monthsShort : 'जन._फ़र._मार्च_अप्रै._मई_जून_जुल._अग._सित._अक्टू._नव._दिस.'.split("_"),
-        weekdays : 'रविवार_सोमवार_मंगलवार_बुधवार_गुरूवार_शुक्रवार_शनिवार'.split("_"),
-        weekdaysShort : 'रवि_सोम_मंगल_बुध_गुरू_शुक्र_शनि'.split("_"),
+    moment.lang('mr', {
+        months : 'जानेवारी_फेब्रुवारी_मार्च_एप्रिल_मे_जून_जुलै_ऑगस्ट_सप्टेंबर_ऑक्टोबर_नोव्हेंबर_डिसेंबर'.split("_"),
+        monthsShort: 'जाने._फेब्रु._मार्च._एप्रि._मे._जून._जुलै._ऑग._सप्टें._ऑक्टो._नोव्हें._डिसें.'.split("_"),
+        weekdays : 'रविवार_सोमवार_मंगळवार_बुधवार_गुरूवार_शुक्रवार_शनिवार'.split("_"),
+        weekdaysShort : 'रवि_सोम_मंगळ_बुध_गुरू_शुक्र_शनि'.split("_"),
         weekdaysMin : 'र_सो_मं_बु_गु_शु_श'.split("_"),
         longDateFormat : {
-            LT : "A h:mm बजे",
+            LT : "A h:mm वाजता",
             L : "DD/MM/YYYY",
             LL : "D MMMM YYYY",
             LLL : "D MMMM YYYY, LT",
@@ -51,26 +51,26 @@
         },
         calendar : {
             sameDay : '[आज] LT',
-            nextDay : '[कल] LT',
+            nextDay : '[उद्या] LT',
             nextWeek : 'dddd, LT',
-            lastDay : '[कल] LT',
-            lastWeek : '[पिछले] dddd, LT',
+            lastDay : '[काल] LT',
+            lastWeek: '[मागील] dddd, LT',
             sameElse : 'L'
         },
         relativeTime : {
-            future : "%s में",
-            past : "%s पहले",
-            s : "कुछ ही क्षण",
-            m : "एक मिनट",
-            mm : "%d मिनट",
-            h : "एक घंटा",
-            hh : "%d घंटे",
-            d : "एक दिन",
-            dd : "%d दिन",
-            M : "एक महीने",
-            MM : "%d महीने",
+            future : "%s नंतर",
+            past : "%s पूर्वी",
+            s : "सेकंद",
+            m: "एक मिनिट",
+            mm: "%d मिनिटे",
+            h : "एक तास",
+            hh : "%d तास",
+            d : "एक दिवस",
+            dd : "%d दिवस",
+            M : "एक महिना",
+            MM : "%d महिने",
             y : "एक वर्ष",
-            yy : "%d वर्ष"
+            yy : "%d वर्षे"
         },
         preparse: function (string) {
             return string.replace(/[१२३४५६७८९०]/g, function (match) {
@@ -82,19 +82,18 @@
                 return symbolMap[match];
             });
         },
-        // Hindi notation for meridiems are quite fuzzy in practice. While there exists
-        // a rigid notion of a 'Pahar' it is not used as rigidly in modern Hindi.
-        meridiem : function (hour, minute, isLower) {
+        meridiem: function (hour, minute, isLower)
+        {
             if (hour < 4) {
-                return "रात";
+                return "रात्री";
             } else if (hour < 10) {
-                return "सुबह";
+                return "सकाळी";
             } else if (hour < 17) {
-                return "दोपहर";
+                return "दुपारी";
             } else if (hour < 20) {
-                return "शाम";
+                return "सायंकाळी";
             } else {
-                return "रात";
+                return "रात्री";
             }
         },
         week : {
