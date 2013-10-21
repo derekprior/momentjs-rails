@@ -6,12 +6,12 @@
     if (typeof define === 'function' && define.amd) {
         define(['moment'], factory); // AMD
     } else if (typeof exports === 'object') {
-        factory(require('../moment')); // Node
+        module.exports = factory(require('../moment')); // Node
     } else {
         factory(window.moment); // Browser global
     }
 }(function (moment) {
-    moment.lang('zh-tw', {
+    return moment.lang('zh-tw', {
         months : "一月_二月_三月_四月_五月_六月_七月_八月_九月_十月_十一月_十二月".split("_"),
         monthsShort : "1月_2月_3月_4月_5月_6月_7月_8月_9月_10月_11月_12月".split("_"),
         weekdays : "星期日_星期一_星期二_星期三_星期四_星期五_星期六".split("_"),
@@ -29,13 +29,14 @@
             llll : "YYYY年MMMD日ddddLT"
         },
         meridiem : function (hour, minute, isLower) {
-            if (hour < 9) {
+            var hm = hour * 100 + minute;
+            if (hm < 900) {
                 return "早上";
-            } else if (hour < 11 && minute < 30) {
+            } else if (hm < 1130) {
                 return "上午";
-            } else if (hour < 13 && minute < 30) {
+            } else if (hm < 1230) {
                 return "中午";
-            } else if (hour < 18) {
+            } else if (hm < 1800) {
                 return "下午";
             } else {
                 return "晚上";

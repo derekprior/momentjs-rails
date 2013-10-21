@@ -7,7 +7,7 @@
     if (typeof define === 'function' && define.amd) {
         define(['moment'], factory); // AMD
     } else if (typeof exports === 'object') {
-        factory(require('../moment')); // Node
+        module.exports = factory(require('../moment')); // Node
     } else {
         factory(window.moment); // Browser global
     }
@@ -71,11 +71,11 @@
         };
     }
 
-    moment.lang('uk', {
+    return moment.lang('uk', {
         months : monthsCaseReplace,
         monthsShort : "січ_лют_бер_квіт_трав_черв_лип_серп_вер_жовт_лист_груд".split("_"),
         weekdays : weekdaysCaseReplace,
-        weekdaysShort : "нед_пон_вів_сер_чет_п’ят_суб".split("_"),
+        weekdaysShort : "нд_пн_вт_ср_чт_пт_сб".split("_"),
         weekdaysMin : "нд_пн_вт_ср_чт_пт_сб".split("_"),
         longDateFormat : {
             LT : "HH:mm",
@@ -119,6 +119,21 @@
             y : "рік",
             yy : relativeTimeWithPlural
         },
+
+        // M. E.: those two are virtually unused but a user might want to implement them for his/her website for some reason
+
+        meridiem : function (hour, minute, isLower) {
+            if (hour < 4) {
+                return "ночі";
+            } else if (hour < 12) {
+                return "ранку";
+            } else if (hour < 17) {
+                return "дня";
+            } else {
+                return "вечора";
+            }
+        },
+
         ordinal: function (number, period) {
             switch (period) {
             case 'M':
