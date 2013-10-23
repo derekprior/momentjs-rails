@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
     This gem allows for its easy inclusion into the rails asset pipeline.
   EOF
 
-  s.files = Dir["{lib,vendor}/**/*"] + ["news.md", "MIT-LICENSE", "README.md"]
+  s.files = Dir["{lib,app}/**/*"] + ["news.md", "MIT-LICENSE", "README.md"]
   s.test_files = Dir["test/**/*"]
 
   s.add_dependency "railties", ">= 3.1"
