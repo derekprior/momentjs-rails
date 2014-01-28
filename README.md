@@ -24,7 +24,7 @@ If you want to include a localization file, also add the following directive:
 
 ## Versioning
 
-momentjs-rails 2.5.0 == Moment.js 2.5.0
+momentjs-rails 2.5.1 == Moment.js 2.5.1
 
 Every attempt is made to mirror the currently shipping Momentum.js version number wherever possible.
 The major, minor, and patch version numbers will always represent the Momentum.js version. Should a gem
