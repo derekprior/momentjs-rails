@@ -1,3 +1,6 @@
+### Version 2.7.0 (2014-06-13)
+- Updated to Moment.js to 2.7.0
+
 ### Version 2.6.0 (2014-04-25)
 - Updated to Moment.js to 2.6.0
 
