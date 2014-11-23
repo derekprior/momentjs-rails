@@ -5,7 +5,7 @@ use with the asset pipeline provided by Rails 3.1 and higher. The gem includes t
 source for ease of exploration. The asset pipeline will minify in production.
 
 Moment.js is "a lightweight javascript date library for parsing, manipulating, and formatting dates."
-Moment.js does not modify the native Date object. Rather, it creates a warpper for it. Please see the
+Moment.js does not modify the native Date object. Rather, it creates a wrapper for it. Please see the
 [documentation](http://momentjs.com/docs/) for details.
 
 ## Usage
