@@ -1,35 +1,38 @@
+### Version 2.8.4 (2015-01-12)
+- Updated Moment.js 2.8.4
+
 ### Version 2.8.3 (2014-09-11)
-- Updated to Moment.js to 2.8.3
+- Updated Moment.js to 2.8.3
 
 ### Version 2.8.2 (2014-09-11)
-- Updated to Moment.js to 2.8.2
+- Updated Moment.js to 2.8.2
 
 ### Version 2.8.1 (2014-08-06)
-- Updated to Moment.js to 2.8.1
+- Updated Moment.js to 2.8.1
 
 ### Version 2.8.0 (2014-08-06)
-- Updated to Moment.js to 2.8.0
+- Updated Moment.js to 2.8.0
 
 ### Version 2.7.0 (2014-06-13)
-- Updated to Moment.js to 2.7.0
+- Updated Moment.js to 2.7.0
 
 ### Version 2.6.0 (2014-04-25)
-- Updated to Moment.js to 2.6.0
+- Updated Moment.js to 2.6.0
 
 ### Version 2.5.1 (2014-01-28)
-- Updated to Moment.js to 2.5.1
+- Updated Moment.js to 2.5.1
 
 ### Version 2.5.0 (2014-01-05)
-- Updated to Moment.js to 2.5.0
+- Updated Moment.js to 2.5.0
 
 ### Version 2.4.0 (2013-11-13)
-- Updated to Moment.js to 2.4.0
+- Updated Moment.js to 2.4.0
 
 ### Version 2.2.1 (2013-09-19)
-- Updated to Moment.js to 2.2.1
+- Updated Moment.js to 2.2.1
 
 ### Version 2.1.0 (2013-07-20)
-- Updated to Moment.js to 2.1.0
+- Updated Moment.js to 2.1.0
 - Updated localization files using compressed versions (ready for browser)
 
 ### Version 2.0.0.2 (2013-06-06)
