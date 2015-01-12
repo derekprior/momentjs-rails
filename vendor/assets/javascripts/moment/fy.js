@@ -1,6 +1,6 @@
 // moment.js locale configuration
-// locale : dutch (nl)
-// author : Joris Röling : https://github.com/jjupiter
+// locale : frisian (fy)
+// author : Robin van der Vliet : https://github.com/robin0van0der0v
 
 (function (factory) {
     if (typeof define === 'function' && define.amd) {
@@ -11,11 +11,11 @@
         factory((typeof global !== 'undefined' ? global : this).moment); // node or other global
     }
 }(function (moment) {
-    var monthsShortWithDots = 'jan._feb._mrt._apr._mei_jun._jul._aug._sep._okt._nov._dec.'.split('_'),
-        monthsShortWithoutDots = 'jan_feb_mrt_apr_mei_jun_jul_aug_sep_okt_nov_dec'.split('_');
+    var monthsShortWithDots = 'jan._feb._mrt._apr._mai_jun._jul._aug._sep._okt._nov._des.'.split('_'),
+        monthsShortWithoutDots = 'jan_feb_mrt_apr_mai_jun_jul_aug_sep_okt_nov_des'.split('_');
 
-    return moment.defineLocale('nl', {
-        months : 'januari_februari_maart_april_mei_juni_juli_augustus_september_oktober_november_december'.split('_'),
+    return moment.defineLocale('fy', {
+        months : 'jannewaris_febrewaris_maart_april_maaie_juny_july_augustus_septimber_oktober_novimber_desimber'.split('_'),
         monthsShort : function (m, format) {
             if (/-MMM-/.test(format)) {
                 return monthsShortWithoutDots[m.month()];
@@ -23,9 +23,9 @@
                 return monthsShortWithDots[m.month()];
             }
         },
-        weekdays : 'zondag_maandag_dinsdag_woensdag_donderdag_vrijdag_zaterdag'.split('_'),
-        weekdaysShort : 'zo._ma._di._wo._do._vr._za.'.split('_'),
-        weekdaysMin : 'Zo_Ma_Di_Wo_Do_Vr_Za'.split('_'),
+        weekdays : 'snein_moandei_tiisdei_woansdei_tongersdei_freed_sneon'.split('_'),
+        weekdaysShort : 'si._mo._ti._wo._to._fr._so.'.split('_'),
+        weekdaysMin : 'Si_Mo_Ti_Wo_To_Fr_So'.split('_'),
         longDateFormat : {
             LT : 'HH:mm',
             LTS : 'LT:ss',
@@ -35,27 +35,27 @@
             LLLL : 'dddd D MMMM YYYY LT'
         },
         calendar : {
-            sameDay: '[vandaag om] LT',
-            nextDay: '[morgen om] LT',
+            sameDay: '[hjoed om] LT',
+            nextDay: '[moarn om] LT',
             nextWeek: 'dddd [om] LT',
-            lastDay: '[gisteren om] LT',
-            lastWeek: '[afgelopen] dddd [om] LT',
+            lastDay: '[juster om] LT',
+            lastWeek: '[ôfrûne] dddd [om] LT',
             sameElse: 'L'
         },
         relativeTime : {
-            future : 'over %s',
-            past : '%s geleden',
-            s : 'een paar seconden',
-            m : 'één minuut',
+            future : 'oer %s',
+            past : '%s lyn',
+            s : 'in pear sekonden',
+            m : 'ien minút',
             mm : '%d minuten',
-            h : 'één uur',
-            hh : '%d uur',
-            d : 'één dag',
+            h : 'ien oere',
+            hh : '%d oeren',
+            d : 'ien dei',
             dd : '%d dagen',
-            M : 'één maand',
-            MM : '%d maanden',
-            y : 'één jaar',
-            yy : '%d jaar'
+            M : 'ien moanne',
+            MM : '%d moannen',
+            y : 'ien jier',
+            yy : '%d jierren'
         },
         ordinalParse: /\d{1,2}(ste|de)/,
         ordinal : function (number) {
