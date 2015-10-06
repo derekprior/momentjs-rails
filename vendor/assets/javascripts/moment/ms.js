@@ -1,5 +1,5 @@
 //! moment.js locale configuration
-//! locale : Bahasa Malaysia (ms-MY)
+//! locale : Bahasa Malaysia (ms)
 //! author : Weldan Jamili : https://github.com/weldan
 
 (function (global, factory) {
@@ -9,7 +9,7 @@
 }(this, function (moment) { 'use strict';
 
 
-    var ms_my = moment.defineLocale('ms-my', {
+    var ms = moment.defineLocale('ms', {
         months : 'Januari_Februari_Mac_April_Mei_Jun_Julai_Ogos_September_Oktober_November_Disember'.split('_'),
         monthsShort : 'Jan_Feb_Mac_Apr_Mei_Jun_Jul_Ogs_Sep_Okt_Nov_Dis'.split('_'),
         weekdays : 'Ahad_Isnin_Selasa_Rabu_Khamis_Jumaat_Sabtu'.split('_'),
@@ -76,6 +76,6 @@
         }
     });
 
-    return ms_my;
+    return ms;
 
 }));
