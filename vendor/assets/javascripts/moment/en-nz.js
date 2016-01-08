@@ -1,5 +1,5 @@
 //! moment.js locale configuration
-//! locale : australian english (en-au)
+//! locale : New Zealand english (en-nz)
 
 ;(function (global, factory) {
    typeof exports === 'object' && typeof module !== 'undefined'
@@ -9,7 +9,7 @@
 }(this, function (moment) { 'use strict';
 
 
-    var en_au = moment.defineLocale('en-au', {
+    var en_nz = moment.defineLocale('en-nz', {
         months : 'January_February_March_April_May_June_July_August_September_October_November_December'.split('_'),
         monthsShort : 'Jan_Feb_Mar_Apr_May_Jun_Jul_Aug_Sept_Oct_Nov_Dec'.split('_'),
         monthsParse : [/^jan/i, /^feb/i, /^mar/i, /^apr/i, /^may/i, /^jun/i, /^jul/i, /^aug/i, /^sep/i, /^oct/i, /^nov/i, /^dec/i],
@@ -64,6 +64,6 @@
         }
     });
 
-    return en_au;
+    return en_nz;
 
 }));
