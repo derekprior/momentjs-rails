@@ -3,3 +3,5 @@
 Gemfile.lock
 test/dummy/log
 test/dummy/tmp
+.idea
+.DS_Store
