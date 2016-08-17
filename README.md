@@ -22,7 +22,11 @@ Add the following directive to your Javascript manifest file (application.js):
 
 If you want to include a localization file, also add the following directive:
 
-    //= require moment/<locale>.js
+    //= require moment/<locale>
+
+If you want to include all localization files:
+
+    //= require moment-locales
 
 ## Versioning
 
