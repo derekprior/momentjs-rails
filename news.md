@@ -1,3 +1,6 @@
+### Version 2.14.1 (2016-09-07)
+- Updated Moment.js to 2.14.1
+
 ### Version 2.11.1 (2016-04-12)
 - Updated Moment.js to 2.11.1
 
