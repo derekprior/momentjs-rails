@@ -1,7 +1,8 @@
 //! moment.js locale configuration
-//! locale : Chinese (Taiwan) [zh-tw]
+//! locale : Chinese (Hong Kong) [zh-hk]
 //! author : Ben : https://github.com/ben-lin
 //! author : Chris Lam : https://github.com/hehachris
+//! author : Konstantin : https://github.com/skfd
 
 ;(function (global, factory) {
    typeof exports === 'object' && typeof module !== 'undefined'
@@ -11,7 +12,7 @@
 }(this, function (moment) { 'use strict';
 
 
-    var zh_tw = moment.defineLocale('zh-tw', {
+    var zh_hk = moment.defineLocale('zh-hk', {
         months : '一月_二月_三月_四月_五月_六月_七月_八月_九月_十月_十一月_十二月'.split('_'),
         monthsShort : '1月_2月_3月_4月_5月_6月_7月_8月_9月_10月_11月_12月'.split('_'),
         weekdays : '星期日_星期一_星期二_星期三_星期四_星期五_星期六'.split('_'),
@@ -99,6 +100,6 @@
         }
     });
 
-    return zh_tw;
+    return zh_hk;
 
 }));
