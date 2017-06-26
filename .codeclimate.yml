@@ -14,7 +14,9 @@ engines:
 
 ratings:
   paths:
+    - "test/"
     - Gemfile.lock
+    - momentjs-rails.gemspec
     - "**.erb"
     - "**.rb"
     - "**.scss"
