@@ -5,4 +5,3 @@ module Momentjs
     end
   end
 end
-
