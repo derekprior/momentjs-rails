@@ -1,4 +1,4 @@
-# momentjs-rails
+# momentjs-rails [![CircleCI](https://img.shields.io/circleci/project/github/professorNim/momentjs-rails.svg)](https://circleci.com/gh/professorNim/momentjs-rails/tree/master) [![Code Climate](https://codeclimate.com/github/professorNim/momentjs-rails.svg)](https://codeclimate.com/github/professorNim/momentjs-rails)
 
 momentjs-rails wraps the [Moment.js](http://momentjs.com/) library in a rails
 engine for simple use with the asset pipeline provided by Rails 3.1 and higher.
@@ -26,7 +26,7 @@ If you want to include a localization file, also add the following directive:
 
 ## Versioning
 
-momentjs-rails 2.17.1 == Moment.js 2.17.1
+momentjs-rails 2.18.1 == Moment.js 2.18.1
 
 Every attempt is made to mirror the currently shipping Moment.js version number
 wherever possible. The major, minor, and patch version numbers will always

@@ -1,0 +1,23 @@
+engines:
+  brakeman:
+    enabled: true
+  bundler-audit:
+    enabled: true
+  duplication:
+    enabled: true
+    config:
+      languages:
+        - ruby
+        - javascript
+  rubocop:
+    enabled: true
+
+ratings:
+  paths:
+    - "test/"
+    - Gemfile.lock
+    - momentjs-rails.gemspec
+    - "**.erb"
+    - "**.rb"
+    - "**.scss"
+    - "**.js"
