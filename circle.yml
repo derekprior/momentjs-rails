@@ -1,0 +1,16 @@
+machine:
+  timezone:
+    America/New_York
+  environment:
+    CC_TEST_REPORTER_ID: 651498d954ce0ea59a6723ec02fdd7af3f7fefa312680df00a9987ad382c2ac4
+dependencies:
+  pre:
+    - gem install bundler
+  post:
+    - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+    - chmod +x ./cc-test-reporter
+test:
+  pre:
+    - ./cc-test-reporter before-build
+  post:
+    - ./cc-test-reporter after-build --exit-code $?

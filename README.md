@@ -1,4 +1,4 @@
-# momentjs-rails
+# momentjs-rails [![CircleCI](https://img.shields.io/circleci/project/github/professorNim/momentjs-rails.svg)](https://circleci.com/gh/professorNim/momentjs-rails/tree/master)
 
 momentjs-rails wraps the [Moment.js](http://momentjs.com/) library in a rails
 engine for simple use with the asset pipeline provided by Rails 3.1 and higher.
