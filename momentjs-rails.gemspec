@@ -15,8 +15,8 @@ Gem::Specification.new do |s|
   s.files = Dir["{lib,vendor}/**/*"] + ['news.md', 'MIT-LICENSE', 'README.md']
   s.test_files = Dir['test/**/*'] - Dir['test/dummy/log/*'] - Dir['test/dummy/tmp/*']
 
-  s.add_dependency 'railties', '5.1.1'
-  s.add_development_dependency 'rails', '5.1.1'
-  s.add_development_dependency 'test-unit', '3.1.8'
-  s.add_development_dependency 'simplecov', '0.14.1'
+  s.add_dependency 'railties', '>= 3.1.0'
+  s.add_development_dependency 'rails', '>= 3.1.0'
+  s.add_development_dependency 'test-unit', '>= 3.0.0'
+  s.add_development_dependency 'simplecov', '>= 0.14.1'
 end
