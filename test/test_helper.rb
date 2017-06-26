@@ -1,3 +1,10 @@
+# Start simplecov if testing on CirclCI
+if ENV['CIRCLE_ARTIFACTS']
+  # Initialize simplecov code coverage gem
+  require 'simplecov'
+  SimpleCov.start 'rails'
+end
+
 # Configure Rails Environment
 ENV["RAILS_ENV"] = "test"
 

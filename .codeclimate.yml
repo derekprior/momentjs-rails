@@ -18,3 +18,4 @@ ratings:
     - "**.erb"
     - "**.rb"
     - "**.scss"
+    - "**.js"
