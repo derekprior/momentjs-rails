@@ -2,7 +2,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "momentjs-rails"
-  s.version     = "2.17.1"
+  s.version     = "2.18.1"
   s.authors     = ["Derek Prior"]
   s.homepage    = "https://github.com/derekprior/momentjs-rails"
   s.summary     = "The Moment.js JavaScript library ready to play with Rails."
@@ -16,6 +16,6 @@ Gem::Specification.new do |s|
   s.test_files = Dir["test/**/*"] - Dir["test/dummy/log/*"] - Dir["test/dummy/tmp/*"]
 
   s.add_dependency "railties", ">= 3.1"
-  s.add_development_dependency "rails", "~> 3.2.12"
+  s.add_development_dependency "rails", ">= 3.2.12"
   s.add_development_dependency 'test-unit', '~> 3.0'
 end
