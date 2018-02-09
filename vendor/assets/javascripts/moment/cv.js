@@ -39,6 +39,7 @@ var cv = moment.defineLocale('cv', {
         },
         past : '%s каялла',
         s : 'пӗр-ик ҫеккунт',
+        ss : '%d ҫеккунт',
         m : 'пӗр минут',
         mm : '%d минут',
         h : 'пӗр сехет',
@@ -50,7 +51,7 @@ var cv = moment.defineLocale('cv', {
         y : 'пӗр ҫул',
         yy : '%d ҫул'
     },
-    ordinalParse: /\d{1,2}-мӗш/,
+    dayOfMonthOrdinalParse: /\d{1,2}-мӗш/,
     ordinal : '%d-мӗш',
     week : {
         dow : 1, // Monday is the first day of the week.

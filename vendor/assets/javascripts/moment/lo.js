@@ -48,6 +48,7 @@ var lo = moment.defineLocale('lo', {
         future : 'ອີກ %s',
         past : '%sຜ່ານມາ',
         s : 'ບໍ່ເທົ່າໃດວິນາທີ',
+        ss : '%d ວິນາທີ' ,
         m : '1 ນາທີ',
         mm : '%d ນາທີ',
         h : '1 ຊົ່ວໂມງ',
@@ -59,7 +60,7 @@ var lo = moment.defineLocale('lo', {
         y : '1 ປີ',
         yy : '%d ປີ'
     },
-    ordinalParse: /(ທີ່)\d{1,2}/,
+    dayOfMonthOrdinalParse: /(ທີ່)\d{1,2}/,
     ordinal : function (number) {
         return 'ທີ່' + number;
     }

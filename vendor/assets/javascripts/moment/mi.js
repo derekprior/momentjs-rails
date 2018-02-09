@@ -40,6 +40,7 @@ var mi = moment.defineLocale('mi', {
         future: 'i roto i %s',
         past: '%s i mua',
         s: 'te hēkona ruarua',
+        ss: '%d hēkona',
         m: 'he meneti',
         mm: '%d meneti',
         h: 'te haora',
@@ -51,7 +52,7 @@ var mi = moment.defineLocale('mi', {
         y: 'he tau',
         yy: '%d tau'
     },
-    ordinalParse: /\d{1,2}º/,
+    dayOfMonthOrdinalParse: /\d{1,2}º/,
     ordinal: '%dº',
     week : {
         dow : 1, // Monday is the first day of the week.

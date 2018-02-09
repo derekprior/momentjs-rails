@@ -38,6 +38,7 @@ var si = moment.defineLocale('si', {
         future : '%sකින්',
         past : '%sකට පෙර',
         s : 'තත්පර කිහිපය',
+        ss : 'තත්පර %d',
         m : 'මිනිත්තුව',
         mm : 'මිනිත්තු %d',
         h : 'පැය',
@@ -49,7 +50,7 @@ var si = moment.defineLocale('si', {
         y : 'වසර',
         yy : 'වසර %d'
     },
-    ordinalParse: /\d{1,2} වැනි/,
+    dayOfMonthOrdinalParse: /\d{1,2} වැනි/,
     ordinal : function (number) {
         return number + ' වැනි';
     },
