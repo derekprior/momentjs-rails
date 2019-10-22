@@ -2,15 +2,9 @@
 //! locale : Bulgarian [bg]
 //! author : Krasen Borisov : https://github.com/kraz
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
+import moment from '../moment';
 
-
-var bg = moment.defineLocale('bg', {
+export default moment.defineLocale('bg', {
     months : 'януари_февруари_март_април_май_юни_юли_август_септември_октомври_ноември_декември'.split('_'),
     monthsShort : 'янр_фев_мар_апр_май_юни_юли_авг_сеп_окт_ное_дек'.split('_'),
     weekdays : 'неделя_понеделник_вторник_сряда_четвъртък_петък_събота'.split('_'),
@@ -82,10 +76,7 @@ var bg = moment.defineLocale('bg', {
     },
     week : {
         dow : 1, // Monday is the first day of the week.
-        doy : 7  // The week that contains Jan 1st is the first week of the year.
+        doy : 7  // The week that contains Jan 7th is the first week of the year.
     }
 });
 
-return bg;
-
-})));

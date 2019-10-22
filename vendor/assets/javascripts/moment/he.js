@@ -4,15 +4,9 @@
 //! author : Moshe Simantov : https://github.com/DevelopmentIL
 //! author : Tal Ater : https://github.com/TalAter
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
+import moment from '../moment';
 
-
-var he = moment.defineLocale('he', {
+export default moment.defineLocale('he', {
     months : 'ינואר_פברואר_מרץ_אפריל_מאי_יוני_יולי_אוגוסט_ספטמבר_אוקטובר_נובמבר_דצמבר'.split('_'),
     monthsShort : 'ינו׳_פבר׳_מרץ_אפר׳_מאי_יוני_יולי_אוג׳_ספט׳_אוק׳_נוב׳_דצמ׳'.split('_'),
     weekdays : 'ראשון_שני_שלישי_רביעי_חמישי_שישי_שבת'.split('_'),
@@ -95,6 +89,3 @@ var he = moment.defineLocale('he', {
     }
 });
 
-return he;
-
-})));

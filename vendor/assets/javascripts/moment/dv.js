@@ -2,13 +2,7 @@
 //! locale : Maldivian [dv]
 //! author : Jawish Hameed : https://github.com/jawish
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
-
+import moment from '../moment';
 
 var months = [
     'ޖެނުއަރީ',
@@ -23,8 +17,7 @@ var months = [
     'އޮކްޓޯބަރު',
     'ނޮވެމްބަރު',
     'ޑިސެމްބަރު'
-];
-var weekdays = [
+], weekdays = [
     'އާދިއްތަ',
     'ހޯމަ',
     'އަންގާރަ',
@@ -34,7 +27,7 @@ var weekdays = [
     'ހޮނިހިރު'
 ];
 
-var dv = moment.defineLocale('dv', {
+export default moment.defineLocale('dv', {
     months : months,
     monthsShort : months,
     weekdays : weekdays,
@@ -92,10 +85,6 @@ var dv = moment.defineLocale('dv', {
     },
     week : {
         dow : 7,  // Sunday is the first day of the week.
-        doy : 12  // The week that contains Jan 1st is the first week of the year.
+        doy : 12  // The week that contains Jan 12th is the first week of the year.
     }
 });
-
-return dv;
-
-})));

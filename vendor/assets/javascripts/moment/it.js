@@ -3,15 +3,9 @@
 //! author : Lorenzo : https://github.com/aliem
 //! author: Mattia Larentis: https://github.com/nostalgiaz
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
+import moment from '../moment';
 
-
-var it = moment.defineLocale('it', {
+export default moment.defineLocale('it', {
     months : 'gennaio_febbraio_marzo_aprile_maggio_giugno_luglio_agosto_settembre_ottobre_novembre_dicembre'.split('_'),
     monthsShort : 'gen_feb_mar_apr_mag_giu_lug_ago_set_ott_nov_dic'.split('_'),
     weekdays : 'domenica_lunedì_martedì_mercoledì_giovedì_venerdì_sabato'.split('_'),
@@ -66,6 +60,3 @@ var it = moment.defineLocale('it', {
     }
 });
 
-return it;
-
-})));

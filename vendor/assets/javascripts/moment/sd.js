@@ -2,13 +2,7 @@
 //! locale : Sindhi [sd]
 //! author : Narain Sagar : https://github.com/narainsagar
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
-
+import moment from '../moment';
 
 var months = [
     'جنوري',
@@ -34,7 +28,7 @@ var days = [
     'ڇنڇر'
 ];
 
-var sd = moment.defineLocale('sd', {
+export default moment.defineLocale('sd', {
     months : months,
     monthsShort : months,
     weekdays : days,
@@ -93,7 +87,3 @@ var sd = moment.defineLocale('sd', {
         doy : 4  // The week that contains Jan 4th is the first week of the year.
     }
 });
-
-return sd;
-
-})));

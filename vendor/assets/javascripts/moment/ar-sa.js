@@ -2,13 +2,7 @@
 //! locale : Arabic (Saudi Arabia) [ar-sa]
 //! author : Suhail Alkowaileet : https://github.com/xsoh
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
-
+import moment from '../moment';
 
 var symbolMap = {
     '1': '١',
@@ -21,8 +15,7 @@ var symbolMap = {
     '8': '٨',
     '9': '٩',
     '0': '٠'
-};
-var numberMap = {
+}, numberMap = {
     '١': '1',
     '٢': '2',
     '٣': '3',
@@ -35,7 +28,7 @@ var numberMap = {
     '٠': '0'
 };
 
-var arSa = moment.defineLocale('ar-sa', {
+export default moment.defineLocale('ar-sa', {
     months : 'يناير_فبراير_مارس_أبريل_مايو_يونيو_يوليو_أغسطس_سبتمبر_أكتوبر_نوفمبر_ديسمبر'.split('_'),
     monthsShort : 'يناير_فبراير_مارس_أبريل_مايو_يونيو_يوليو_أغسطس_سبتمبر_أكتوبر_نوفمبر_ديسمبر'.split('_'),
     weekdays : 'الأحد_الإثنين_الثلاثاء_الأربعاء_الخميس_الجمعة_السبت'.split('_'),
@@ -97,10 +90,7 @@ var arSa = moment.defineLocale('ar-sa', {
     },
     week : {
         dow : 0, // Sunday is the first day of the week.
-        doy : 6  // The week that contains Jan 1st is the first week of the year.
+        doy : 6  // The week that contains Jan 6th is the first week of the year.
     }
 });
 
-return arSa;
-
-})));

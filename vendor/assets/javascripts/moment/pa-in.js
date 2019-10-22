@@ -2,13 +2,7 @@
 //! locale : Punjabi (India) [pa-in]
 //! author : Harpreet Singh : https://github.com/harpreetkhalsagtbit
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
-
+import moment from '../moment';
 
 var symbolMap = {
     '1': '੧',
@@ -21,8 +15,8 @@ var symbolMap = {
     '8': '੮',
     '9': '੯',
     '0': '੦'
-};
-var numberMap = {
+},
+numberMap = {
     '੧': '1',
     '੨': '2',
     '੩': '3',
@@ -35,8 +29,8 @@ var numberMap = {
     '੦': '0'
 };
 
-var paIn = moment.defineLocale('pa-in', {
-    // There are months name as per Nanakshahi Calender but they are not used as rigidly in modern Punjabi.
+export default moment.defineLocale('pa-in', {
+    // There are months name as per Nanakshahi Calendar but they are not used as rigidly in modern Punjabi.
     months : 'ਜਨਵਰੀ_ਫ਼ਰਵਰੀ_ਮਾਰਚ_ਅਪ੍ਰੈਲ_ਮਈ_ਜੂਨ_ਜੁਲਾਈ_ਅਗਸਤ_ਸਤੰਬਰ_ਅਕਤੂਬਰ_ਨਵੰਬਰ_ਦਸੰਬਰ'.split('_'),
     monthsShort : 'ਜਨਵਰੀ_ਫ਼ਰਵਰੀ_ਮਾਰਚ_ਅਪ੍ਰੈਲ_ਮਈ_ਜੂਨ_ਜੁਲਾਈ_ਅਗਸਤ_ਸਤੰਬਰ_ਅਕਤੂਬਰ_ਨਵੰਬਰ_ਦਸੰਬਰ'.split('_'),
     weekdays : 'ਐਤਵਾਰ_ਸੋਮਵਾਰ_ਮੰਗਲਵਾਰ_ਬੁਧਵਾਰ_ਵੀਰਵਾਰ_ਸ਼ੁੱਕਰਵਾਰ_ਸ਼ਨੀਚਰਵਾਰ'.split('_'),
@@ -53,7 +47,7 @@ var paIn = moment.defineLocale('pa-in', {
     calendar : {
         sameDay : '[ਅਜ] LT',
         nextDay : '[ਕਲ] LT',
-        nextWeek : 'dddd, LT',
+        nextWeek : '[ਅਗਲਾ] dddd, LT',
         lastDay : '[ਕਲ] LT',
         lastWeek : '[ਪਿਛਲੇ] dddd, LT',
         sameElse : 'L'
@@ -116,10 +110,7 @@ var paIn = moment.defineLocale('pa-in', {
     },
     week : {
         dow : 0, // Sunday is the first day of the week.
-        doy : 6  // The week that contains Jan 1st is the first week of the year.
+        doy : 6  // The week that contains Jan 6th is the first week of the year.
     }
 });
 
-return paIn;
-
-})));

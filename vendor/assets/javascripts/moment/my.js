@@ -4,13 +4,7 @@
 //! author : David Rossellat : https://github.com/gholadr
 //! author : Tin Aung Lin : https://github.com/thanyawzinmin
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
-
+import moment from '../moment';
 
 var symbolMap = {
     '1': '၁',
@@ -23,8 +17,7 @@ var symbolMap = {
     '8': '၈',
     '9': '၉',
     '0': '၀'
-};
-var numberMap = {
+}, numberMap = {
     '၁': '1',
     '၂': '2',
     '၃': '3',
@@ -37,7 +30,7 @@ var numberMap = {
     '၀': '0'
 };
 
-var my = moment.defineLocale('my', {
+export default moment.defineLocale('my', {
     months: 'ဇန်နဝါရီ_ဖေဖော်ဝါရီ_မတ်_ဧပြီ_မေ_ဇွန်_ဇူလိုင်_သြဂုတ်_စက်တင်ဘာ_အောက်တိုဘာ_နိုဝင်ဘာ_ဒီဇင်ဘာ'.split('_'),
     monthsShort: 'ဇန်_ဖေ_မတ်_ပြီ_မေ_ဇွန်_လိုင်_သြ_စက်_အောက်_နို_ဒီ'.split('_'),
     weekdays: 'တနင်္ဂနွေ_တနင်္လာ_အင်္ဂါ_ဗုဒ္ဓဟူး_ကြာသပတေး_သောကြာ_စနေ'.split('_'),
@@ -88,10 +81,7 @@ var my = moment.defineLocale('my', {
     },
     week: {
         dow: 1, // Monday is the first day of the week.
-        doy: 4 // The week that contains Jan 1st is the first week of the year.
+        doy: 4 // The week that contains Jan 4th is the first week of the year.
     }
 });
 
-return my;
-
-})));

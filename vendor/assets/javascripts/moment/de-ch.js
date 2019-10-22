@@ -2,15 +2,9 @@
 //! locale : German (Switzerland) [de-ch]
 //! author : sschueller : https://github.com/sschueller
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
-
-
 // based on: https://www.bk.admin.ch/dokumentation/sprachen/04915/05016/index.html?lang=de#
+
+import moment from '../moment';
 
 function processRelativeTime(number, withoutSuffix, key, isFuture) {
     var format = {
@@ -26,7 +20,7 @@ function processRelativeTime(number, withoutSuffix, key, isFuture) {
     return withoutSuffix ? format[key][0] : format[key][1];
 }
 
-var deCh = moment.defineLocale('de-ch', {
+export default moment.defineLocale('de-ch', {
     months : 'Januar_Februar_März_April_Mai_Juni_Juli_August_September_Oktober_November_Dezember'.split('_'),
     monthsShort : 'Jan._Feb._März_Apr._Mai_Juni_Juli_Aug._Sep._Okt._Nov._Dez.'.split('_'),
     monthsParseExact : true,
@@ -73,7 +67,3 @@ var deCh = moment.defineLocale('de-ch', {
         doy : 4  // The week that contains Jan 4th is the first week of the year.
     }
 });
-
-return deCh;
-
-})));

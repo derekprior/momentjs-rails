@@ -2,13 +2,7 @@
 //! locale : Azerbaijani [az]
 //! author : topchiyev : https://github.com/topchiyev
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
-
+import moment from '../moment';
 
 var suffixes = {
     1: '-inci',
@@ -31,7 +25,7 @@ var suffixes = {
     90: '-ıncı'
 };
 
-var az = moment.defineLocale('az', {
+export default moment.defineLocale('az', {
     months : 'yanvar_fevral_mart_aprel_may_iyun_iyul_avqust_sentyabr_oktyabr_noyabr_dekabr'.split('_'),
     monthsShort : 'yan_fev_mar_apr_may_iyn_iyl_avq_sen_okt_noy_dek'.split('_'),
     weekdays : 'Bazar_Bazar ertəsi_Çərşənbə axşamı_Çərşənbə_Cümə axşamı_Cümə_Şənbə'.split('_'),
@@ -57,7 +51,7 @@ var az = moment.defineLocale('az', {
     relativeTime : {
         future : '%s sonra',
         past : '%s əvvəl',
-        s : 'birneçə saniyyə',
+        s : 'birneçə saniyə',
         ss : '%d saniyə',
         m : 'bir dəqiqə',
         mm : '%d dəqiqə',
@@ -97,10 +91,7 @@ var az = moment.defineLocale('az', {
     },
     week : {
         dow : 1, // Monday is the first day of the week.
-        doy : 7  // The week that contains Jan 1st is the first week of the year.
+        doy : 7  // The week that contains Jan 7th is the first week of the year.
     }
 });
 
-return az;
-
-})));

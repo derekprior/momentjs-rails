@@ -2,13 +2,7 @@
 //! locale : Serbian [sr]
 //! author : Milan Janačković<milanjanackovic@gmail.com> : https://github.com/milan-j
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
-
+import moment from '../moment';
 
 var translator = {
     words: { //Different grammatical cases
@@ -34,7 +28,7 @@ var translator = {
     }
 };
 
-var sr = moment.defineLocale('sr', {
+export default moment.defineLocale('sr', {
     months: 'januar_februar_mart_april_maj_jun_jul_avgust_septembar_oktobar_novembar_decembar'.split('_'),
     monthsShort: 'jan._feb._mar._apr._maj_jun_jul_avg._sep._okt._nov._dec.'.split('_'),
     monthsParseExact: true,
@@ -103,10 +97,6 @@ var sr = moment.defineLocale('sr', {
     ordinal : '%d.',
     week : {
         dow : 1, // Monday is the first day of the week.
-        doy : 7  // The week that contains Jan 1st is the first week of the year.
+        doy : 7  // The week that contains Jan 7th is the first week of the year.
     }
 });
-
-return sr;
-
-})));

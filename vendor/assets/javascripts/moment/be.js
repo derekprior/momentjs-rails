@@ -4,13 +4,7 @@
 //! author: Praleska: http://praleska.pro/
 //! Author : Menelion Elensúle : https://github.com/Oire
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
-
+import moment from '../moment';
 
 function plural(word, num) {
     var forms = word.split('_');
@@ -36,7 +30,7 @@ function relativeTimeWithPlural(number, withoutSuffix, key) {
     }
 }
 
-var be = moment.defineLocale('be', {
+export default moment.defineLocale('be', {
     months : {
         format: 'студзеня_лютага_сакавіка_красавіка_траўня_чэрвеня_ліпеня_жніўня_верасня_кастрычніка_лістапада_снежня'.split('_'),
         standalone: 'студзень_люты_сакавік_красавік_травень_чэрвень_ліпень_жнівень_верасень_кастрычнік_лістапад_снежань'.split('_')
@@ -45,7 +39,7 @@ var be = moment.defineLocale('be', {
     weekdays : {
         format: 'нядзелю_панядзелак_аўторак_сераду_чацвер_пятніцу_суботу'.split('_'),
         standalone: 'нядзеля_панядзелак_аўторак_серада_чацвер_пятніца_субота'.split('_'),
-        isFormat: /\[ ?[Вв] ?(?:мінулую|наступную)? ?\] ?dddd/
+        isFormat: /\[ ?[Ууў] ?(?:мінулую|наступную)? ?\] ?dddd/
     },
     weekdaysShort : 'нд_пн_ат_ср_чц_пт_сб'.split('_'),
     weekdaysMin : 'нд_пн_ат_ср_чц_пт_сб'.split('_'),
@@ -126,10 +120,7 @@ var be = moment.defineLocale('be', {
     },
     week : {
         dow : 1, // Monday is the first day of the week.
-        doy : 7  // The week that contains Jan 1st is the first week of the year.
+        doy : 7  // The week that contains Jan 7th is the first week of the year.
     }
 });
 
-return be;
-
-})));

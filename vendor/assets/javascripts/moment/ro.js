@@ -3,13 +3,7 @@
 //! author : Vlad Gurdiga : https://github.com/gurdiga
 //! author : Valentin Agachi : https://github.com/avaly
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
-
+import moment from '../moment';
 
 function relativeTimeWithPlural(number, withoutSuffix, key) {
     var format = {
@@ -27,7 +21,7 @@ function relativeTimeWithPlural(number, withoutSuffix, key) {
     return number + separator + format[key];
 }
 
-var ro = moment.defineLocale('ro', {
+export default moment.defineLocale('ro', {
     months : 'ianuarie_februarie_martie_aprilie_mai_iunie_iulie_august_septembrie_octombrie_noiembrie_decembrie'.split('_'),
     monthsShort : 'ian._febr._mart._apr._mai_iun._iul._aug._sept._oct._nov._dec.'.split('_'),
     monthsParseExact: true,
@@ -68,10 +62,7 @@ var ro = moment.defineLocale('ro', {
     },
     week : {
         dow : 1, // Monday is the first day of the week.
-        doy : 7  // The week that contains Jan 1st is the first week of the year.
+        doy : 7  // The week that contains Jan 7th is the first week of the year.
     }
 });
 
-return ro;
-
-})));

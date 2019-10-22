@@ -2,13 +2,7 @@
 //! locale : Kazakh [kk]
 //! authors : Nurlan Rakhimzhanov : https://github.com/nurlan
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
-
+import moment from '../moment';
 
 var suffixes = {
     0: '-ші',
@@ -33,7 +27,7 @@ var suffixes = {
     100: '-ші'
 };
 
-var kk = moment.defineLocale('kk', {
+export default moment.defineLocale('kk', {
     months : 'қаңтар_ақпан_наурыз_сәуір_мамыр_маусым_шілде_тамыз_қыркүйек_қазан_қараша_желтоқсан'.split('_'),
     monthsShort : 'қаң_ақп_нау_сәу_мам_мау_шіл_там_қыр_қаз_қар_жел'.split('_'),
     weekdays : 'жексенбі_дүйсенбі_сейсенбі_сәрсенбі_бейсенбі_жұма_сенбі'.split('_'),
@@ -79,10 +73,6 @@ var kk = moment.defineLocale('kk', {
     },
     week : {
         dow : 1, // Monday is the first day of the week.
-        doy : 7  // The week that contains Jan 1st is the first week of the year.
+        doy : 7  // The week that contains Jan 7th is the first week of the year.
     }
 });
-
-return kk;
-
-})));

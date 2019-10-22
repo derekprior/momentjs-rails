@@ -2,13 +2,7 @@
 //! locale : Lithuanian [lt]
 //! author : Mindaugas Mozūras : https://github.com/mmozuras
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
-
+import moment from '../moment';
 
 var units = {
     'ss' : 'sekundė_sekundžių_sekundes',
@@ -53,7 +47,7 @@ function translate(number, withoutSuffix, key, isFuture) {
         }
     }
 }
-var lt = moment.defineLocale('lt', {
+export default moment.defineLocale('lt', {
     months : {
         format: 'sausio_vasario_kovo_balandžio_gegužės_birželio_liepos_rugpjūčio_rugsėjo_spalio_lapkričio_gruodžio'.split('_'),
         standalone: 'sausis_vasaris_kovas_balandis_gegužė_birželis_liepa_rugpjūtis_rugsėjis_spalis_lapkritis_gruodis'.split('_'),
@@ -114,6 +108,3 @@ var lt = moment.defineLocale('lt', {
     }
 });
 
-return lt;
-
-})));

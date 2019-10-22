@@ -3,15 +3,9 @@
 //! authors : Espen Hovlandsdal : https://github.com/rexxars
 //!           Sigurd Gartmann : https://github.com/sigurdga
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
+import moment from '../moment';
 
-
-var nb = moment.defineLocale('nb', {
+export default moment.defineLocale('nb', {
     months : 'januar_februar_mars_april_mai_juni_juli_august_september_oktober_november_desember'.split('_'),
     monthsShort : 'jan._feb._mars_april_mai_juni_juli_aug._sep._okt._nov._des.'.split('_'),
     monthsParseExact : true,
@@ -59,6 +53,3 @@ var nb = moment.defineLocale('nb', {
     }
 });
 
-return nb;
-
-})));

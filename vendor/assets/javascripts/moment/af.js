@@ -2,15 +2,9 @@
 //! locale : Afrikaans [af]
 //! author : Werner Mollentze : https://github.com/wernerm
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
+import moment from '../moment';
 
-
-var af = moment.defineLocale('af', {
+export default moment.defineLocale('af', {
     months : 'Januarie_Februarie_Maart_April_Mei_Junie_Julie_Augustus_September_Oktober_November_Desember'.split('_'),
     monthsShort : 'Jan_Feb_Mrt_Apr_Mei_Jun_Jul_Aug_Sep_Okt_Nov_Des'.split('_'),
     weekdays : 'Sondag_Maandag_Dinsdag_Woensdag_Donderdag_Vrydag_Saterdag'.split('_'),
@@ -68,7 +62,3 @@ var af = moment.defineLocale('af', {
         doy : 4  // Die week wat die 4de Januarie bevat is die eerste week van die jaar.
     }
 });
-
-return af;
-
-})));

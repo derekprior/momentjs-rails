@@ -2,15 +2,9 @@
 //! locale : French (Switzerland) [fr-ch]
 //! author : Gaspard Bucher : https://github.com/gaspard
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
+import moment from '../moment';
 
-
-var frCh = moment.defineLocale('fr-ch', {
+export default moment.defineLocale('fr-ch', {
     months : 'janvier_février_mars_avril_mai_juin_juillet_août_septembre_octobre_novembre_décembre'.split('_'),
     monthsShort : 'janv._févr._mars_avr._mai_juin_juil._août_sept._oct._nov._déc.'.split('_'),
     monthsParseExact : true,
@@ -74,6 +68,3 @@ var frCh = moment.defineLocale('fr-ch', {
     }
 });
 
-return frCh;
-
-})));

@@ -2,15 +2,9 @@
 //! locale : Swedish [sv]
 //! author : Jens Alm : https://github.com/ulmus
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
+import moment from '../moment';
 
-
-var sv = moment.defineLocale('sv', {
+export default moment.defineLocale('sv', {
     months : 'januari_februari_mars_april_maj_juni_juli_augusti_september_oktober_november_december'.split('_'),
     monthsShort : 'jan_feb_mar_apr_maj_jun_jul_aug_sep_okt_nov_dec'.split('_'),
     weekdays : 'söndag_måndag_tisdag_onsdag_torsdag_fredag_lördag'.split('_'),
@@ -65,6 +59,3 @@ var sv = moment.defineLocale('sv', {
     }
 });
 
-return sv;
-
-})));

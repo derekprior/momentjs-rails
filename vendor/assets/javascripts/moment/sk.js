@@ -3,16 +3,10 @@
 //! author : Martin Minka : https://github.com/k2s
 //! based on work of petrbela : https://github.com/petrbela
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
+import moment from '../moment';
 
-
-var months = 'január_február_marec_apríl_máj_jún_júl_august_september_október_november_december'.split('_');
-var monthsShort = 'jan_feb_mar_apr_máj_jún_júl_aug_sep_okt_nov_dec'.split('_');
+var months = 'január_február_marec_apríl_máj_jún_júl_august_september_október_november_december'.split('_'),
+    monthsShort = 'jan_feb_mar_apr_máj_jún_júl_aug_sep_okt_nov_dec'.split('_');
 function plural(n) {
     return (n > 1) && (n < 5);
 }
@@ -76,7 +70,7 @@ function translate(number, withoutSuffix, key, isFuture) {
     }
 }
 
-var sk = moment.defineLocale('sk', {
+export default moment.defineLocale('sk', {
     months : months,
     monthsShort : monthsShort,
     weekdays : 'nedeľa_pondelok_utorok_streda_štvrtok_piatok_sobota'.split('_'),
@@ -153,6 +147,3 @@ var sk = moment.defineLocale('sk', {
     }
 });
 
-return sk;
-
-})));

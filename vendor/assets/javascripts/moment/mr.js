@@ -3,13 +3,7 @@
 //! author : Harshad Kale : https://github.com/kalehv
 //! author : Vivek Athalye : https://github.com/vnathalye
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
-
+import moment from '../moment';
 
 var symbolMap = {
     '1': '१',
@@ -22,8 +16,8 @@ var symbolMap = {
     '8': '८',
     '9': '९',
     '0': '०'
-};
-var numberMap = {
+},
+numberMap = {
     '१': '1',
     '२': '2',
     '३': '3',
@@ -74,7 +68,7 @@ function relativeTimeMr(number, withoutSuffix, string, isFuture)
     return output.replace(/%d/i, number);
 }
 
-var mr = moment.defineLocale('mr', {
+export default moment.defineLocale('mr', {
     months : 'जानेवारी_फेब्रुवारी_मार्च_एप्रिल_मे_जून_जुलै_ऑगस्ट_सप्टेंबर_ऑक्टोबर_नोव्हेंबर_डिसेंबर'.split('_'),
     monthsShort: 'जाने._फेब्रु._मार्च._एप्रि._मे._जून._जुलै._ऑग._सप्टें._ऑक्टो._नोव्हें._डिसें.'.split('_'),
     monthsParseExact : true,
@@ -123,25 +117,21 @@ var mr = moment.defineLocale('mr', {
             return symbolMap[match];
         });
     },
-    meridiemParse: /रात्री|सकाळी|दुपारी|सायंकाळी/,
-    meridiemHour : function (hour, meridiem) {
+    meridiemParse: /पहाटे|सकाळी|दुपारी|सायंकाळी|रात्री/,
+    meridiemHour: function (hour, meridiem) {
         if (hour === 12) {
             hour = 0;
         }
-        if (meridiem === 'रात्री') {
-            return hour < 4 ? hour : hour + 12;
-        } else if (meridiem === 'सकाळी') {
+        if (meridiem === 'पहाटे' || meridiem === 'सकाळी') {
             return hour;
-        } else if (meridiem === 'दुपारी') {
-            return hour >= 10 ? hour : hour + 12;
-        } else if (meridiem === 'सायंकाळी') {
-            return hour + 12;
+        } else if (meridiem === 'दुपारी' || meridiem === 'सायंकाळी' || meridiem === 'रात्री') {
+            return hour >= 12 ? hour : hour + 12;
         }
     },
     meridiem: function (hour, minute, isLower) {
-        if (hour < 4) {
-            return 'रात्री';
-        } else if (hour < 10) {
+        if (hour >= 0 && hour < 6) {
+            return 'पहाटे';
+        } else if (hour < 12) {
             return 'सकाळी';
         } else if (hour < 17) {
             return 'दुपारी';
@@ -153,10 +143,6 @@ var mr = moment.defineLocale('mr', {
     },
     week : {
         dow : 0, // Sunday is the first day of the week.
-        doy : 6  // The week that contains Jan 1st is the first week of the year.
+        doy : 6  // The week that contains Jan 6th is the first week of the year.
     }
 });
-
-return mr;
-
-})));

@@ -2,15 +2,9 @@
 //! locale : Arabic (Kuwait) [ar-kw]
 //! author : Nusret Parlak: https://github.com/nusretparlak
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
+import moment from '../moment';
 
-
-var arKw = moment.defineLocale('ar-kw', {
+export default moment.defineLocale('ar-kw', {
     months : 'يناير_فبراير_مارس_أبريل_ماي_يونيو_يوليوز_غشت_شتنبر_أكتوبر_نونبر_دجنبر'.split('_'),
     monthsShort : 'يناير_فبراير_مارس_أبريل_ماي_يونيو_يوليوز_غشت_شتنبر_أكتوبر_نونبر_دجنبر'.split('_'),
     weekdays : 'الأحد_الإتنين_الثلاثاء_الأربعاء_الخميس_الجمعة_السبت'.split('_'),
@@ -51,10 +45,6 @@ var arKw = moment.defineLocale('ar-kw', {
     },
     week : {
         dow : 0, // Sunday is the first day of the week.
-        doy : 12  // The week that contains Jan 1st is the first week of the year.
+        doy : 12  // The week that contains Jan 12th is the first week of the year.
     }
 });
-
-return arKw;
-
-})));

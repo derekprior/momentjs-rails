@@ -1,16 +1,10 @@
 //! moment.js locale configuration
 //! locale : Vietnamese [vi]
-//! author : Bang Nguyen : https://github.com/bangnk
+//! author : Chien Kira : https://github.com/chienkira
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
+import moment from '../moment';
 
-
-var vi = moment.defineLocale('vi', {
+export default moment.defineLocale('vi', {
     months : 'tháng 1_tháng 2_tháng 3_tháng 4_tháng 5_tháng 6_tháng 7_tháng 8_tháng 9_tháng 10_tháng 11_tháng 12'.split('_'),
     monthsShort : 'Th01_Th02_Th03_Th04_Th05_Th06_Th07_Th08_Th09_Th10_Th11_Th12'.split('_'),
     monthsParseExact : true,
@@ -46,7 +40,7 @@ var vi = moment.defineLocale('vi', {
         nextDay: '[Ngày mai lúc] LT',
         nextWeek: 'dddd [tuần tới lúc] LT',
         lastDay: '[Hôm qua lúc] LT',
-        lastWeek: 'dddd [tuần rồi lúc] LT',
+        lastWeek: 'dddd [tuần trước lúc] LT',
         sameElse: 'L'
     },
     relativeTime : {
@@ -75,6 +69,3 @@ var vi = moment.defineLocale('vi', {
     }
 });
 
-return vi;
-
-})));

@@ -3,13 +3,7 @@
 //! author : Sawood Alam : https://github.com/ibnesayeed
 //! author : Zack : https://github.com/ZackVision
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
-
+import moment from '../moment';
 
 var months = [
     'جنوری',
@@ -35,7 +29,7 @@ var days = [
     'ہفتہ'
 ];
 
-var ur = moment.defineLocale('ur', {
+export default moment.defineLocale('ur', {
     months : months,
     monthsShort : months,
     weekdays : days,
@@ -94,7 +88,3 @@ var ur = moment.defineLocale('ur', {
         doy : 4  // The week that contains Jan 4th is the first week of the year.
     }
 });
-
-return ur;
-
-})));

@@ -2,13 +2,7 @@
 //! locale : Persian [fa]
 //! author : Ebrahim Byagowi : https://github.com/ebraminio
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
-
+import moment from '../moment';
 
 var symbolMap = {
     '1': '۱',
@@ -21,8 +15,7 @@ var symbolMap = {
     '8': '۸',
     '9': '۹',
     '0': '۰'
-};
-var numberMap = {
+}, numberMap = {
     '۱': '1',
     '۲': '2',
     '۳': '3',
@@ -35,7 +28,7 @@ var numberMap = {
     '۰': '0'
 };
 
-var fa = moment.defineLocale('fa', {
+export default moment.defineLocale('fa', {
     months : 'ژانویه_فوریه_مارس_آوریل_مه_ژوئن_ژوئیه_اوت_سپتامبر_اکتبر_نوامبر_دسامبر'.split('_'),
     monthsShort : 'ژانویه_فوریه_مارس_آوریل_مه_ژوئن_ژوئیه_اوت_سپتامبر_اکتبر_نوامبر_دسامبر'.split('_'),
     weekdays : 'یک\u200cشنبه_دوشنبه_سه\u200cشنبه_چهارشنبه_پنج\u200cشنبه_جمعه_شنبه'.split('_'),
@@ -99,10 +92,7 @@ var fa = moment.defineLocale('fa', {
     ordinal : '%dم',
     week : {
         dow : 6, // Saturday is the first day of the week.
-        doy : 12 // The week that contains Jan 1st is the first week of the year.
+        doy : 12 // The week that contains Jan 12th is the first week of the year.
     }
 });
 
-return fa;
-
-})));

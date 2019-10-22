@@ -2,13 +2,7 @@
 //! locale : Hindi [hi]
 //! author : Mayank Singhal : https://github.com/mayanksinghal
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
-
+import moment from '../moment';
 
 var symbolMap = {
     '1': '१',
@@ -21,8 +15,8 @@ var symbolMap = {
     '8': '८',
     '9': '९',
     '0': '०'
-};
-var numberMap = {
+},
+numberMap = {
     '१': '1',
     '२': '2',
     '३': '3',
@@ -35,7 +29,7 @@ var numberMap = {
     '०': '0'
 };
 
-var hi = moment.defineLocale('hi', {
+export default moment.defineLocale('hi', {
     months : 'जनवरी_फ़रवरी_मार्च_अप्रैल_मई_जून_जुलाई_अगस्त_सितम्बर_अक्टूबर_नवम्बर_दिसम्बर'.split('_'),
     monthsShort : 'जन._फ़र._मार्च_अप्रै._मई_जून_जुल._अग._सित._अक्टू._नव._दिस.'.split('_'),
     monthsParseExact: true,
@@ -116,10 +110,7 @@ var hi = moment.defineLocale('hi', {
     },
     week : {
         dow : 0, // Sunday is the first day of the week.
-        doy : 6  // The week that contains Jan 1st is the first week of the year.
+        doy : 6  // The week that contains Jan 6th is the first week of the year.
     }
 });
 
-return hi;
-
-})));

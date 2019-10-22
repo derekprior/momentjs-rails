@@ -2,16 +2,10 @@
 //! locale : Northern Sami [se]
 //! authors : Bård Rolstad Henriksen : https://github.com/karamell
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
 
+import moment from '../moment';
 
-
-var se = moment.defineLocale('se', {
+export default moment.defineLocale('se', {
     months : 'ođđajagemánnu_guovvamánnu_njukčamánnu_cuoŋománnu_miessemánnu_geassemánnu_suoidnemánnu_borgemánnu_čakčamánnu_golggotmánnu_skábmamánnu_juovlamánnu'.split('_'),
     monthsShort : 'ođđj_guov_njuk_cuo_mies_geas_suoi_borg_čakč_golg_skáb_juov'.split('_'),
     weekdays : 'sotnabeaivi_vuossárga_maŋŋebárga_gaskavahkku_duorastat_bearjadat_lávvardat'.split('_'),
@@ -56,7 +50,3 @@ var se = moment.defineLocale('se', {
         doy : 4  // The week that contains Jan 4th is the first week of the year.
     }
 });
-
-return se;
-
-})));

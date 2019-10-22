@@ -2,15 +2,9 @@
 //! locale : Tagalog (Philippines) [tl-ph]
 //! author : Dan Hagman : https://github.com/hagmandan
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
+import moment from '../moment';
 
-
-var tlPh = moment.defineLocale('tl-ph', {
+export default moment.defineLocale('tl-ph', {
     months : 'Enero_Pebrero_Marso_Abril_Mayo_Hunyo_Hulyo_Agosto_Setyembre_Oktubre_Nobyembre_Disyembre'.split('_'),
     monthsShort : 'Ene_Peb_Mar_Abr_May_Hun_Hul_Ago_Set_Okt_Nob_Dis'.split('_'),
     weekdays : 'Linggo_Lunes_Martes_Miyerkules_Huwebes_Biyernes_Sabado'.split('_'),
@@ -58,6 +52,3 @@ var tlPh = moment.defineLocale('tl-ph', {
     }
 });
 
-return tlPh;
-
-})));

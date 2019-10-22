@@ -2,13 +2,7 @@
 //! locale : Breton [br]
 //! author : Jean-Baptiste Le Duigou : https://github.com/jbleduigou
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
-
+import moment from '../moment';
 
 function relativeTimeWithMutation(number, withoutSuffix, key) {
     var format = {
@@ -54,7 +48,7 @@ function softMutation(text) {
     return mutationTable[text.charAt(0)] + text.substring(1);
 }
 
-var br = moment.defineLocale('br', {
+export default moment.defineLocale('br', {
     months : 'Genver_C\'hwevrer_Meurzh_Ebrel_Mae_Mezheven_Gouere_Eost_Gwengolo_Here_Du_Kerzu'.split('_'),
     monthsShort : 'Gen_C\'hwe_Meu_Ebr_Mae_Eve_Gou_Eos_Gwe_Her_Du_Ker'.split('_'),
     weekdays : 'Sul_Lun_Meurzh_Merc\'her_Yaou_Gwener_Sadorn'.split('_'),
@@ -62,12 +56,12 @@ var br = moment.defineLocale('br', {
     weekdaysMin : 'Su_Lu_Me_Mer_Ya_Gw_Sa'.split('_'),
     weekdaysParseExact : true,
     longDateFormat : {
-        LT : 'h[e]mm A',
-        LTS : 'h[e]mm:ss A',
+        LT : 'HH:mm',
+        LTS : 'HH:mm:ss',
         L : 'DD/MM/YYYY',
         LL : 'D [a viz] MMMM YYYY',
-        LLL : 'D [a viz] MMMM YYYY h[e]mm A',
-        LLLL : 'dddd, D [a viz] MMMM YYYY h[e]mm A'
+        LLL : 'D [a viz] MMMM YYYY HH:mm',
+        LLLL : 'dddd, D [a viz] MMMM YYYY HH:mm'
     },
     calendar : {
         sameDay : '[Hiziv da] LT',
@@ -104,6 +98,3 @@ var br = moment.defineLocale('br', {
     }
 });
 
-return br;
-
-})));

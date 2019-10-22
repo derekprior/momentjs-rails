@@ -2,13 +2,7 @@
 //! locale : Konkani Latin script [gom-latn]
 //! author : The Discoverer : https://github.com/WikiDiscoverer
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
-
+import moment from '../moment';
 
 function processRelativeTime(number, withoutSuffix, key, isFuture) {
     var format = {
@@ -16,8 +10,8 @@ function processRelativeTime(number, withoutSuffix, key, isFuture) {
         'ss': [number + ' secondanim', number + ' second'],
         'm': ['eka mintan', 'ek minute'],
         'mm': [number + ' mintanim', number + ' mintam'],
-        'h': ['eka horan', 'ek hor'],
-        'hh': [number + ' horanim', number + ' hor'],
+        'h': ['eka voran', 'ek vor'],
+        'hh': [number + ' voranim', number + ' voram'],
         'd': ['eka disan', 'ek dis'],
         'dd': [number + ' disanim', number + ' dis'],
         'M': ['eka mhoinean', 'ek mhoino'],
@@ -28,7 +22,7 @@ function processRelativeTime(number, withoutSuffix, key, isFuture) {
     return withoutSuffix ? format[key][0] : format[key][1];
 }
 
-var gomLatn = moment.defineLocale('gom-latn', {
+export default moment.defineLocale('gom-latn', {
     months : 'Janer_Febrer_Mars_Abril_Mai_Jun_Julai_Agost_Setembr_Otubr_Novembr_Dezembr'.split('_'),
     monthsShort : 'Jan._Feb._Mars_Abr._Mai_Jun_Jul._Ago._Set._Otu._Nov._Dez.'.split('_'),
     monthsParseExact : true,
@@ -118,7 +112,3 @@ var gomLatn = moment.defineLocale('gom-latn', {
         }
     }
 });
-
-return gomLatn;
-
-})));

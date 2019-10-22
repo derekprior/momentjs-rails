@@ -3,13 +3,7 @@
 //! author : zemlanin : https://github.com/zemlanin
 //! Author : Menelion Elensúle : https://github.com/Oire
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
-
+import moment from '../moment';
 
 function plural(word, num) {
     var forms = word.split('_');
@@ -41,6 +35,9 @@ function weekdaysCaseReplace(m, format) {
         'genitive': 'неділі_понеділка_вівторка_середи_четверга_п’ятниці_суботи'.split('_')
     };
 
+    if (m === true) {
+        return weekdays['nominative'].slice(1, 7).concat(weekdays['nominative'].slice(0, 1));
+    }
     if (!m) {
         return weekdays['nominative'];
     }
@@ -58,7 +55,7 @@ function processHoursFunction(str) {
     };
 }
 
-var uk = moment.defineLocale('uk', {
+export default moment.defineLocale('uk', {
     months : {
         'format': 'січня_лютого_березня_квітня_травня_червня_липня_серпня_вересня_жовтня_листопада_грудня'.split('_'),
         'standalone': 'січень_лютий_березень_квітень_травень_червень_липень_серпень_вересень_жовтень_листопад_грудень'.split('_')
@@ -144,10 +141,6 @@ var uk = moment.defineLocale('uk', {
     },
     week : {
         dow : 1, // Monday is the first day of the week.
-        doy : 7  // The week that contains Jan 1st is the first week of the year.
+        doy : 7  // The week that contains Jan 7th is the first week of the year.
     }
 });
-
-return uk;
-
-})));

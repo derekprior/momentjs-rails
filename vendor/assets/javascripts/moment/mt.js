@@ -2,15 +2,9 @@
 //! locale : Maltese (Malta) [mt]
 //! author : Alessandro Maruccia : https://github.com/alesma
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
+import moment from '../moment';
 
-
-var mt = moment.defineLocale('mt', {
+export default moment.defineLocale('mt', {
     months : 'Jannar_Frar_Marzu_April_Mejju_Ġunju_Lulju_Awwissu_Settembru_Ottubru_Novembru_Diċembru'.split('_'),
     monthsShort : 'Jan_Fra_Mar_Apr_Mej_Ġun_Lul_Aww_Set_Ott_Nov_Diċ'.split('_'),
     weekdays : 'Il-Ħadd_It-Tnejn_It-Tlieta_L-Erbgħa_Il-Ħamis_Il-Ġimgħa_Is-Sibt'.split('_'),
@@ -55,7 +49,3 @@ var mt = moment.defineLocale('mt', {
         doy : 4  // The week that contains Jan 4th is the first week of the year.
     }
 });
-
-return mt;
-
-})));

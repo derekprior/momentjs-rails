@@ -2,15 +2,9 @@
 //! locale : Thai [th]
 //! author : Kridsada Thanabulpong : https://github.com/sirn
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
+import moment from '../moment';
 
-
-var th = moment.defineLocale('th', {
+export default moment.defineLocale('th', {
     months : 'มกราคม_กุมภาพันธ์_มีนาคม_เมษายน_พฤษภาคม_มิถุนายน_กรกฎาคม_สิงหาคม_กันยายน_ตุลาคม_พฤศจิกายน_ธันวาคม'.split('_'),
     monthsShort : 'ม.ค._ก.พ._มี.ค._เม.ย._พ.ค._มิ.ย._ก.ค._ส.ค._ก.ย._ต.ค._พ.ย._ธ.ค.'.split('_'),
     monthsParseExact: true,
@@ -62,7 +56,3 @@ var th = moment.defineLocale('th', {
         yy : '%d ปี'
     }
 });
-
-return th;
-
-})));

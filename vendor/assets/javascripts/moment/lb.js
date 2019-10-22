@@ -3,13 +3,7 @@
 //! author : mweimerskirch : https://github.com/mweimerskirch
 //! author : David Raison : https://github.com/kwisatz
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
-
+import moment from '../moment';
 
 function processRelativeTime(number, withoutSuffix, key, isFuture) {
     var format = {
@@ -76,7 +70,7 @@ function eifelerRegelAppliesToNumber(number) {
     }
 }
 
-var lb = moment.defineLocale('lb', {
+export default moment.defineLocale('lb', {
     months: 'Januar_Februar_Mäerz_Abrëll_Mee_Juni_Juli_August_September_Oktober_November_Dezember'.split('_'),
     monthsShort: 'Jan._Febr._Mrz._Abr._Mee_Jun._Jul._Aug._Sept._Okt._Nov._Dez.'.split('_'),
     monthsParseExact : true,
@@ -133,6 +127,3 @@ var lb = moment.defineLocale('lb', {
     }
 });
 
-return lb;
-
-})));

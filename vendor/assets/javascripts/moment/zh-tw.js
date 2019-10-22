@@ -3,15 +3,9 @@
 //! author : Ben : https://github.com/ben-lin
 //! author : Chris Lam : https://github.com/hehachris
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
+import moment from '../moment';
 
-
-var zhTw = moment.defineLocale('zh-tw', {
+export default moment.defineLocale('zh-tw', {
     months : '一月_二月_三月_四月_五月_六月_七月_八月_九月_十月_十一月_十二月'.split('_'),
     monthsShort : '1月_2月_3月_4月_5月_6月_7月_8月_9月_10月_11月_12月'.split('_'),
     weekdays : '星期日_星期一_星期二_星期三_星期四_星期五_星期六'.split('_'),
@@ -59,11 +53,11 @@ var zhTw = moment.defineLocale('zh-tw', {
         }
     },
     calendar : {
-        sameDay : '[今天]LT',
-        nextDay : '[明天]LT',
-        nextWeek : '[下]ddddLT',
-        lastDay : '[昨天]LT',
-        lastWeek : '[上]ddddLT',
+        sameDay : '[今天] LT',
+        nextDay : '[明天] LT',
+        nextWeek : '[下]dddd LT',
+        lastDay : '[昨天] LT',
+        lastWeek : '[上]dddd LT',
         sameElse : 'L'
     },
     dayOfMonthOrdinalParse: /\d{1,2}(日|月|週)/,
@@ -99,7 +93,3 @@ var zhTw = moment.defineLocale('zh-tw', {
         yy : '%d 年'
     }
 });
-
-return zhTw;
-
-})));

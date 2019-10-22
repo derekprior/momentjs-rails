@@ -3,13 +3,7 @@
 //! author : Henry Kehlmann : https://github.com/madhenry
 //! improvements : Illimar Tambek : https://github.com/ragulka
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
-
+import moment from '../moment';
 
 function processRelativeTime(number, withoutSuffix, key, isFuture) {
     var format = {
@@ -31,7 +25,7 @@ function processRelativeTime(number, withoutSuffix, key, isFuture) {
     return isFuture ? format[key][0] : format[key][1];
 }
 
-var et = moment.defineLocale('et', {
+export default moment.defineLocale('et', {
     months        : 'jaanuar_veebruar_märts_aprill_mai_juuni_juuli_august_september_oktoober_november_detsember'.split('_'),
     monthsShort   : 'jaan_veebr_märts_apr_mai_juuni_juuli_aug_sept_okt_nov_dets'.split('_'),
     weekdays      : 'pühapäev_esmaspäev_teisipäev_kolmapäev_neljapäev_reede_laupäev'.split('_'),
@@ -77,6 +71,3 @@ var et = moment.defineLocale('et', {
     }
 });
 
-return et;
-
-})));

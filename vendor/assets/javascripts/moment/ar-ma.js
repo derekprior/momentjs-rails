@@ -3,15 +3,9 @@
 //! author : ElFadili Yassine : https://github.com/ElFadiliY
 //! author : Abdel Said : https://github.com/abdelsaid
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
+import moment from '../moment';
 
-
-var arMa = moment.defineLocale('ar-ma', {
+export default moment.defineLocale('ar-ma', {
     months : 'يناير_فبراير_مارس_أبريل_ماي_يونيو_يوليوز_غشت_شتنبر_أكتوبر_نونبر_دجنبر'.split('_'),
     monthsShort : 'يناير_فبراير_مارس_أبريل_ماي_يونيو_يوليوز_غشت_شتنبر_أكتوبر_نونبر_دجنبر'.split('_'),
     weekdays : 'الأحد_الإتنين_الثلاثاء_الأربعاء_الخميس_الجمعة_السبت'.split('_'),
@@ -52,10 +46,7 @@ var arMa = moment.defineLocale('ar-ma', {
     },
     week : {
         dow : 6, // Saturday is the first day of the week.
-        doy : 12  // The week that contains Jan 1st is the first week of the year.
+        doy : 12  // The week that contains Jan 12th is the first week of the year.
     }
 });
 
-return arMa;
-
-})));

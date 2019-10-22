@@ -2,15 +2,9 @@
 //! locale : Pseudo [x-pseudo]
 //! author : Andrew Hood : https://github.com/andrewhood125
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
+import moment from '../moment';
 
-
-var xPseudo = moment.defineLocale('x-pseudo', {
+export default moment.defineLocale('x-pseudo', {
     months : 'J~áñúá~rý_F~ébrú~árý_~Márc~h_Áp~ríl_~Máý_~Júñé~_Júl~ý_Áú~gúst~_Sép~témb~ér_Ó~ctób~ér_Ñ~óvém~bér_~Décé~mbér'.split('_'),
     monthsShort : 'J~áñ_~Féb_~Már_~Ápr_~Máý_~Júñ_~Júl_~Áúg_~Sép_~Óct_~Ñóv_~Déc'.split('_'),
     monthsParseExact : true,
@@ -63,7 +57,3 @@ var xPseudo = moment.defineLocale('x-pseudo', {
         doy : 4  // The week that contains Jan 4th is the first week of the year.
     }
 });
-
-return xPseudo;
-
-})));

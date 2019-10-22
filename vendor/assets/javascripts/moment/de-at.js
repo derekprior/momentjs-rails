@@ -5,13 +5,7 @@
 //! author : Martin Groller : https://github.com/MadMG
 //! author : Mikolaj Dadela : https://github.com/mik01aj
 
-;(function (global, factory) {
-   typeof exports === 'object' && typeof module !== 'undefined'
-       && typeof require === 'function' ? factory(require('../moment')) :
-   typeof define === 'function' && define.amd ? define(['../moment'], factory) :
-   factory(global.moment)
-}(this, (function (moment) { 'use strict';
-
+import moment from '../moment';
 
 function processRelativeTime(number, withoutSuffix, key, isFuture) {
     var format = {
@@ -27,7 +21,7 @@ function processRelativeTime(number, withoutSuffix, key, isFuture) {
     return withoutSuffix ? format[key][0] : format[key][1];
 }
 
-var deAt = moment.defineLocale('de-at', {
+export default moment.defineLocale('de-at', {
     months : 'Jänner_Februar_März_April_Mai_Juni_Juli_August_September_Oktober_November_Dezember'.split('_'),
     monthsShort : 'Jän._Feb._März_Apr._Mai_Juni_Juli_Aug._Sep._Okt._Nov._Dez.'.split('_'),
     monthsParseExact : true,
@@ -74,7 +68,3 @@ var deAt = moment.defineLocale('de-at', {
         doy : 4  // The week that contains Jan 4th is the first week of the year.
     }
 });
-
-return deAt;
-
-})));
