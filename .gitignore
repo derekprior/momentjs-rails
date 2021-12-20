@@ -6,3 +6,4 @@ test/dummy/tmp
 .idea
 .DS_Store
 pkg/
+tmp/
