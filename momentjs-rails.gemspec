@@ -2,7 +2,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "momentjs-rails"
-  s.version     = "2.29.1"
+  s.version     = "2.29.1.1"
   s.authors     = ["Derek Prior"]
   s.homepage    = "https://github.com/derekprior/momentjs-rails"
   s.summary     = "The Moment.js JavaScript library ready to play with Rails."
