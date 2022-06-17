@@ -1,3 +1,6 @@
+### Version 2.29.3 (2022-06-17)
+- Fixed version of assets included with 2.29.3
+
 ### Version 2.29.1.1 (2022-01-03)
 - Fixed version of assets included with 2.29.1
 
