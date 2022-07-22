@@ -26,7 +26,7 @@ If you want to include a localization file, also add the following directive:
 
 ## Versioning
 
-momentjs-rails 2.29.1.1 == Moment.js 2.29.1
+momentjs-rails 2.29.4 == Moment.js 2.29.4
 
 Every attempt is made to mirror the currently shipping Moment.js version number
 wherever possible. The major, minor, and patch version numbers will always
