@@ -1,3 +1,6 @@
+### Version 2.29.4.1 (2022-07-25)
+- Fixed version of assets included with 2.29.4
+
 ### Version 2.29.4 (2022-07-13)
 - Updated Moment.js to 2.29.4
 
